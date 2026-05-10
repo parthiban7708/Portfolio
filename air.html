@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Airline Ticket Booking System</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    
+
+    header{
+      width:100%;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#020617;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:28px;
+      color:#38bdf8;
+      font-weight:bold;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin-left:25px;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    
+
+    .home{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:80px 10%;
+      gap:50px;
+    }
+
+    .content{
+      max-width:600px;
+      animation:slideLeft 1s ease;
+    }
+
+    .content h1{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .content span{
+      color:#38bdf8;
+    }
+
+    .content p{
+      font-size:18px;
+      line-height:1.8;
+      color:#d1d5db;
+      margin-bottom:30px;
+    }
+
+
+    .image-box{
+      width:420px;
+      animation:float 4s ease-in-out infinite;
+    }
+
+    .image-box img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 0 30px rgba(56,189,248,0.6);
+    }
+
+    
+
+    section{
+      padding:80px 10%;
+    }
+
+    h2{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:40px;
+      color:#38bdf8;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(56,189,248,0.5);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    .card p{
+      color:#d1d5db;
+      line-height:1.6;
+    }
+
+    
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#020617;
+      color:#94a3b8;
+      margin-top:50px;
+    }
+
+    
+
+    @keyframes float{
+
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-20px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    @keyframes slideLeft{
+
+      from{
+        opacity:0;
+        transform:translateX(-100px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    
+
+    @media(max-width:900px){
+
+      .home{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .content h1{
+        font-size:40px;
+      }
+
+      .image-box{
+        width:100%;
+      }
+
+      nav a{
+        margin-left:15px;
+        font-size:15px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  
+
+  <header>
+
+    <div class="logo">Airline Booking</div>
+
+    <nav>
+
+      <a href="front.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="#technology">Technology</a>
+
+    </nav>
+
+  </header>
+
+  
+
+  <section class="home">
+
+    <div class="content">
+
+      <h1>Airline Ticket <span>Booking System</span></h1>
+
+      <p>
+
+        Airline Ticket Booking System is a web application developed
+        using HTML, CSS, JavaScript, Core Java, JDBC,
+        Exception Handling and MySQL.
+
+        This project helps users search flights,
+        book tickets, cancel bookings and manage
+        passenger details easily.
+
+      </p>
+
+    </div>
+
+    <div class="image-box">
+
+      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+      alt="Flight">
+
+    </div>
+
+  </section>
+
+  
+
+  <section id="features">
+
+    <h2>Project Features</h2>
+
+    <div class="features">
+
+      <div class="card">
+
+        <h3>User Login</h3>
+
+        <p>
+          Secure login system for passengers and administrators.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Flight Booking</h3>
+
+        <p>
+          Users can search and book available flights easily.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Ticket Cancellation</h3>
+
+        <p>
+          Passengers can cancel booked tickets quickly.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Database Management</h3>
+
+        <p>
+          Flight and passenger details stored using MySQL database.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="technology">
+
+    <h2>Technologies Used</h2>
+
+    <div class="features">
+
+      <div class="card">
+
+        <h3>HTML</h3>
+
+        <p>
+          Used for webpage structure and forms.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>CSS</h3>
+
+        <p>
+          Used for styling and responsive design.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>JavaScript</h3>
+
+        <p>
+          Used for validation and user interactions.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Core Java</h3>
+
+        <p>
+          Used for backend application development.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>JDBC</h3>
+
+        <p>
+          Used for database connectivity and operations.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Exception Handling</h3>
+
+        <p>
+          Used to manage runtime errors efficiently.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>MySQL</h3>
+
+        <p>
+          Used for storing flight and passenger details.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+
+    © 2026 Airline Ticket Booking System | Developed by PARTHIBAN
+
+  </footer>
+
+  
+
+  <script>
+
+    const cards = document.querySelectorAll(".card");
+
+    window.addEventListener("scroll", () => {
+
+      cards.forEach(card => {
+
+        const top = card.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 100){
+
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0px)";
+
+        }
+
+      });
+
+    });
+
+    cards.forEach(card => {
+
+      card.style.opacity = "0";
+      card.style.transform = "translateY(50px)";
+      card.style.transition = "1s";
+
+    });
+
+  </script>
+
+</body>
+
+</html>
